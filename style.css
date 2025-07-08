@@ -1,0 +1,52 @@
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+  background: #fff0f5;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 80%;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.radio-group {
+  margin: 15px 0;
+  text-align: left;
+}
+
+.radio-group label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+button {
+  padding: 12px 20px;
+  background: #ff69b4;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #ff1493;
+}

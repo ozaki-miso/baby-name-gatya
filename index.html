@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>赤ちゃん名付けガチャ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>赤ちゃん名付けガチャ</h1>
+    <p>苗字とタイプを選んで、素敵な名前と運勢をチェック！</p>
+
+    <input id="last-name" type="text" placeholder="苗字を入力" />
+
+    <div class="radio-group">
+      <p>性別を選択:</p>
+      <label><input type="radio" name="gender" value="男の子" /> 男の子</label>
+      <label><input type="radio" name="gender" value="女の子" /> 女の子</label>
+      <label><input type="radio" name="gender" value="未定" /> 未定</label>
+    </div>
+
+    <div class="radio-group">
+      <p>名前タイプを選択:</p>
+      <label><input type="radio" name="type" value="今風" /> 今風</label>
+      <label><input type="radio" name="type" value="古風" /> 古風</label>
+      <label><input type="radio" name="type" value="キラキラ" /> キラキラ</label>
+    </div>
+
+    <button id="generate-button">ガチャを回す！</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
