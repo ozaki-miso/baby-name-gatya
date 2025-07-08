@@ -65,8 +65,8 @@ button:hover {
 
 .gauge-bar {
   background-color: #ff66cc;
-  height: 40%;
-  width: 0%;
+  height: 100%;
+  width: 50%;
   transition: width 0.5s ease;
 }
 
