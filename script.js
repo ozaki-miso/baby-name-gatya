@@ -49,6 +49,6 @@ function weightedRandomRank() {
         fortunes: fortune
       }));
 
-      window.location.href = "/result";
+      window.location.href = "/result.html";
     });
   });
