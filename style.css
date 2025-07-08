@@ -70,3 +70,20 @@ button:hover {
   width: 0%;
   transition: width 0.5s ease;
 }
+.result-name {
+  font-family: 'Sawarabi Mincho', serif;  /* 筆文字っぽいフォント */
+  font-size: 3em;     /* 大きく */
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.result-yomi {
+  font-size: 1.2em;
+  color: #666;
+  text-align: center;
+  margin: 0 0 0.3em 0;
+  font-family: 'Kosugi Maru', sans-serif;  /* フリガナは丸ゴシック風など軽めに */
+}
+
