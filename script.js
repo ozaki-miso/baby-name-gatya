@@ -40,9 +40,6 @@ function weightedRandomRank() {
         total: weightedRandomRank()
       };
 
-      // アニメ演出（仮）
-      alert("ガチャ演出中...\n名前が決まりました！");
-
       localStorage.setItem("result", JSON.stringify({
         name: lastName + " " + chosen.name,
         yomi: chosen.yomi,
