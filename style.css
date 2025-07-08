@@ -61,12 +61,14 @@ button:hover {
   border-radius: 5px;
   overflow: hidden;
   margin-top: 4px;
+  width 50%;
+
 }
 
 .gauge-bar {
   background-color: #ff66cc;
   height: 100%;
-  width: 50%;
+  width: 0%;
   transition: width 0.5s ease;
 }
 
