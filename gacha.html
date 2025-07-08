@@ -1,0 +1,56 @@
+<!-- gacha_animation.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ガチャ演出</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #000;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .gacha-container {
+      text-align: center;
+      animation: flash 2s linear infinite;
+    }
+
+    .gacha-text {
+      font-size: 2em;
+      opacity: 0;
+      animation: fadeInOut 3s ease-in-out forwards;
+    }
+
+    @keyframes fadeInOut {
+      0% { opacity: 0; }
+      30% { opacity: 1; }
+      70% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    @keyframes flash {
+      0%, 100% { background-color: #000; }
+      50% { background-color: #222; }
+    }
+  </style>
+</head>
+<body>
+  <div class="gacha-container">
+    <div class="gacha-text" id="gachaText">ガチャ演出中...</div>
+  </div>
+
+  <script>
+    // 3秒後に結果ページへ自動遷移
+    setTimeout(() => {
+      window.location.href = "/result.html";
+    }, 3000);
+  </script>
+</body>
+</html>
