@@ -49,6 +49,6 @@ function weightedRandomRank() {
         fortunes: fortune
       }));
 
-      window.location.href = "/result.html";
+      window.location.href = "/gacha.html";
     });
   });
