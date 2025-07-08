@@ -60,9 +60,8 @@ button:hover {
   height: 10px;
   border-radius: 5px;
   overflow: hidden;
-  margin-top: 4px auto 0;
+  margin: 4px auto 0; 
   width: 30%;
-
 }
 
 .gauge-bar {
@@ -71,4 +70,3 @@ button:hover {
   width: 0%;
   transition: width 0.5s ease;
 }
-
