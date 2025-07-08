@@ -1,50 +1,54 @@
+fetch("name_data.json")
+  .then(response => response.json())
+  .then(names => {
+    function getRandom(array) {
+      return array[Math.floor(Math.random() * array.length)];
+    }
 
-const names = {
-  今風: [
-    { name: "結愛", yomi: "ゆあ", gender: "女の子" },
-    { name: "陽翔", yomi: "はると", gender: "男の子" },
-    { name: "心結", yomi: "みゆ", gender: "女の子" }
-  ],
-  古風: [
-    { name: "文乃", yomi: "あやの", gender: "女の子" },
-    { name: "清志郎", yomi: "せいしろう", gender: "男の子" },
-    { name: "千代", yomi: "ちよ", gender: "女の子" }
-  ],
-  キラキラ: [
-    { name: "煌星", yomi: "こうせい", gender: "男の子" },
-    { name: "夢空", yomi: "そら", gender: "女の子" },
-    { name: "星輝", yomi: "せら", gender: "未定" }
-  ]
-};
-
-function getRandom(array) {
-  return array[Math.floor(Math.random() * array.length)];
+    
+function weightedRandomRank() {
+  const ranks = ["SSS", "SS", "S", "A", "B", "C", "D"];
+  const probabilities = [0.01, 0.02, 0.194, 0.194, 0.194, 0.194, 0.194];
+  const rand = Math.random();
+  let cumulative = 0;
+  for (let i = 0; i < ranks.length; i++) {
+    cumulative += probabilities[i];
+    if (rand < cumulative) return ranks[i];
+  }
+  return "D"; // fallback
 }
 
-document.getElementById("generate-button").addEventListener("click", () => {
-  const lastName = document.getElementById("last-name").value.trim();
-  const type = document.querySelector('input[name="type"]:checked')?.value;
-  const gender = document.querySelector('input[name="gender"]:checked')?.value;
 
-  if (!lastName || !type || !gender) {
-    alert("苗字・性別・タイプを選んでください");
-    return;
-  }
+    document.getElementById("generate-button").addEventListener("click", () => {
+      const lastName = document.getElementById("last-name").value.trim();
+      const type = document.querySelector('input[name="type"]:checked')?.value;
+      const gender = document.querySelector('input[name="gender"]:checked')?.value;
 
-  const filteredList = names[type].filter(n => n.gender === gender || n.gender === "未定");
-  const chosen = getRandom(filteredList);
+      if (!lastName || !type || !gender) {
+        alert("苗字・性別・タイプを選んでください");
+        return;
+      }
 
-  const ranks = ["SSS", "SS", "S", "A", "B", "C", "D"];
-  const fortune = {
-    love: getRandom(ranks),
-    study: getRandom(ranks),
-    money: getRandom(ranks),
-    home: getRandom(ranks),
-    total: getRandom(ranks)
-  };
+      const filteredList = names[type].filter(n => n.gender === gender || n.gender === "未定");
+      const chosen = getRandom(filteredList);
 
-  alert(
-    `名前: ${lastName} ${chosen.name}（${chosen.yomi}）\n` +
-    `恋愛運: ${fortune.love}\n学業運: ${fortune.study}\n金運: ${fortune.money}\n家庭運: ${fortune.home}\n総合運: ${fortune.total}`
-  );
-});
+      const fortune = {
+        love: weightedRandomRank(),
+        study: weightedRandomRank(),
+        money: weightedRandomRank(),
+        home: weightedRandomRank(),
+        total: weightedRandomRank()
+      };
+
+      // アニメ演出（仮）
+      alert("ガチャ演出中...\n名前が決まりました！");
+
+      localStorage.setItem("result", JSON.stringify({
+        name: lastName + " " + chosen.name,
+        yomi: chosen.yomi,
+        fortunes: fortune
+      }));
+
+      window.location.href = "/result";
+    });
+  });
