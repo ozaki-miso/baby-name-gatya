@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   new Chart(ctx, {
     type: 'radar',
     data: {
-      labels: ['恋愛運', '学業運', '金運', '家庭運', '総合運'],
+      labels: ['恋愛運', '学業運', '金運', '家庭運', '健康運'],
       datasets: [{
         label: 'スコア',
         data: [
