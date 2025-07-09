@@ -29,7 +29,7 @@ function weightedRandomRank() {
         return;
       }
 
-      const filteredList = names[type].filter(n => n.gender === gender || n.gender === "未定");
+      const filteredList = names[type].filter(n => n.gender === gender || n.gender === "両方");
       const chosen = getRandom(filteredList);
 
       const fortune = {
