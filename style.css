@@ -1,3 +1,93 @@
+body {
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(120deg, #fff1f9, #e7f5ff);
+  font-family: 'Kosugi Maru', sans-serif;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 80%;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.radio-group {
+  margin: 15px 0;
+  text-align: left;
+}
+
+.radio-group label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+button {
+  padding: 12px 20px;
+  background: #ff69b4;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #ff1493;
+}
+
+.fortune-block {
+  margin: 20px 0;
+  font-size: 1.2em;
+}
+
+.gauge {
+  background-color: #eee;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 4px auto 0;
+  width: 30%;
+}
+
+.gauge-bar {
+  background-color: #ff66cc;
+  height: 100%;
+  width: 0%;
+  transition: width 0.5s ease;
+}
+
+.result-name {
+  font-family: 'Sawarabi Mincho', serif;  /* 筆文字っぽいフォント */
+  font-size: 4em;     /* 大きく */
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.result-yomi {
+  font-size: 1.2em;
+  color: #666;
+  text-align: center;
+  margin: 0 0 0.3em 0;
+  font-family: 'Kosugi Maru', sans-serif;  /* フリガナは丸ゴシック風など軽めに */
+}
+
 .rank {
   font-weight: bold;
   font-size: 1.2em;
