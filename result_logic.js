@@ -21,6 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
     bar.style.width = Math.min(score, 100) + "%";
     label.textContent = Math.floor(score);
     rankLabel.textContent = rank;
+
+    // クラスは既存のrankクラスは残しつつrank-ランク名を付与
+    rankLabel.className = "rank rank-" + rank;
   });
 
   // レーダーチャート描画
@@ -28,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   new Chart(ctx, {
     type: 'radar',
     data: {
-      labels: ['恋愛運', '学業運', '金運', '家庭運', '健康運'],
+      labels: ['恋愛運', '学業運', '金運', '家庭運', '総合運'],
       datasets: [{
         label: 'スコア',
         data: [
@@ -79,3 +82,4 @@ function getRankByScore(score) {
   if (score >= 30) return "C";
   return "D";
 }
+
