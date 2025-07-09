@@ -1,56 +1,74 @@
-<!-- gacha_animation.html -->
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>ガチャ演出</title>
+  <meta charset="UTF-8" />
+  <title>名前生成中...</title>
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
-      background-color: #000;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+      padding: 0;
+      background: linear-gradient(135deg, #ffe4ec, #d0f0ff);
       overflow: hidden;
+      font-family: 'Kosugi Maru', sans-serif;
     }
 
-    .gacha-container {
+    h1 {
+      color: #ff66cc;
       text-align: center;
-      animation: flash 2s linear infinite;
+      margin-top: 40vh;
+      font-size: 2.5em;
+      animation: blink 1s infinite alternate;
     }
 
-    .gacha-text {
-      font-size: 2em;
-      opacity: 0;
-      animation: fadeInOut 3s ease-in-out forwards;
+    .sparkle {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: radial-gradient(#fff, transparent);
+      border-radius: 50%;
+      opacity: 0.6;
+      animation: float 3s linear infinite;
     }
 
-    @keyframes fadeInOut {
-      0% { opacity: 0; }
-      30% { opacity: 1; }
-      70% { opacity: 1; }
-      100% { opacity: 0; }
+    @keyframes blink {
+      from { opacity: 0.6; }
+      to { opacity: 1; }
     }
 
-    @keyframes flash {
-      0%, 100% { background-color: #000; }
-      50% { background-color: #222; }
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(0.8);
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.2);
+        opacity: 0;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="gacha-container">
-    <div class="gacha-text" id="gachaText">ガチャ演出中...</div>
-  </div>
+  <h1>名前生成中...</h1>
 
+  <!-- キラキラをたくさん生成 -->
   <script>
-    // 3秒後に結果ページへ自動遷移
+    for (let i = 0; i < 20; i++) {
+      const sparkle = document.createElement("div");
+      sparkle.classList.add("sparkle");
+      sparkle.style.left = Math.random() * 100 + "vw";
+      sparkle.style.animationDuration = (2 + Math.random() * 2) + "s";
+      sparkle.style.animationDelay = Math.random() + "s";
+      document.body.appendChild(sparkle);
+    }
+
+    // 数秒後に結果ページへ移動
     setTimeout(() => {
-      window.location.href = "/result.html";
-    }, 3000);
+      window.location.href = "/result";
+    }, 3500);
   </script>
 </body>
 </html>
+
