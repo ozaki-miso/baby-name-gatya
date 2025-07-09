@@ -79,3 +79,5 @@ function getRankByScore(score) {
   if (score >= 30) return "C";
   return "D";
 }
+rankLabel.textContent = rank;
+rankLabel.className = "rank rank-" + rank;
