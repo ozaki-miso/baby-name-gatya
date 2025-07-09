@@ -6,6 +6,34 @@ body {
   background: linear-gradient(120deg, #fff1f9, #e7f5ff);
   font-family: 'Kosugi Maru', sans-serif;
 }
+/* Google Fontsを先に読み込んでおいてください */
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
+
+.fancy-title {
+  font-family: 'Cherry Bomb One', cursive;
+  font-size: 3em;
+  color: #ff69b4;
+  text-shadow:
+    1px 1px 0 #fff,
+    2px 2px 3px rgba(255, 105, 180, 0.5),
+    0 0 10px rgba(255, 182, 193, 0.7);
+  background: linear-gradient(90deg, #ffccf9, #fcdff1);
+  padding: 10px 20px;
+  border-radius: 15px;
+  display: inline-block;
+  animation: popIn 0.8s ease-out;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
 .container {
   max-width: 500px;
