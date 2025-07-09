@@ -72,7 +72,7 @@ button:hover {
 }
 .result-name {
   font-family: 'Sawarabi Mincho', serif;  /* 筆文字っぽいフォント */
-  font-size: 3em;     /* 大きく */
+  font-size: 4em;     /* 大きく */
   font-weight: bold;
   text-align: center;
   margin: 0;
