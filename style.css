@@ -1,11 +1,12 @@
 
 body {
-  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
-  background: #fff0f5;
   color: #333;
   margin: 0;
   padding: 20px;
   text-align: center;
+  background: linear-gradient(120deg, #fff1f9, #e7f5ff);
+  font-family: 'Kosugi Maru', sans-serif;
+
 }
 
 .container {
