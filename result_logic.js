@@ -1,3 +1,4 @@
+document.getElementById("origin").textContent = result.origin;
 
 // スコア生成とランク判定
 function weightedRandomScore() {
