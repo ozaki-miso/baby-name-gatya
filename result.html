@@ -5,19 +5,23 @@
   <title>名付け結果 - 赤ちゃん名付けガチャ</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
-
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- 追加 -->
 </head>
 <body>
   <h1>🎉 ガチャ結果 🎉</h1>
 
-    <div class="result-name-container">
+  <div class="result-name-container">
     <p id="yomi" class="result-yomi">（よみがな）</p>
     <h2 id="name" class="result-name">赤ちゃんの名前</h2>
     <p id="origin">（名前の由来がここに入ります）</p>
-
   </div>
 
+  <!-- レーダーチャート追加 -->
+  <div style="max-width: 350px; margin: 30px auto;">
+    <canvas id="fortuneChart" width="300" height="300"></canvas>
+  </div>
 
+  <!-- スコアバーも残すならここも -->
   <div id="love" class="fortune-block">
     ❤️ 恋愛運：<span class="label"></span>点（<span class="rank"></span>）
     <div class="gauge"><div class="gauge-bar"></div></div>
