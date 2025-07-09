@@ -42,3 +42,34 @@ document.addEventListener("DOMContentLoaded", () => {
     rankLabel.textContent = rank;
   });
 });
+// レーダーチャート描画
+const ctx = document.getElementById("fortuneChart").getContext("2d");
+const chart = new Chart(ctx, {
+  type: 'radar',
+  data: {
+    labels: ['恋愛運', '学業運', '金運', '家庭運', '総合運'],
+    datasets: [{
+      label: 'スコア',
+      data: [
+        result.fortunes.love,
+        result.fortunes.study,
+        result.fortunes.money,
+        result.fortunes.home,
+        result.fortunes.total
+      ],
+      backgroundColor: 'rgba(255, 105, 180, 0.2)',
+      borderColor: 'rgba(255, 105, 180, 1)',
+      pointBackgroundColor: 'rgba(255, 105, 180, 1)'
+    }]
+  },
+  options: {
+    scale: {
+      min: 0,
+      max: 100,
+      ticks: {
+        stepSize: 20
+      }
+    },
+    responsive: true
+  }
+});
