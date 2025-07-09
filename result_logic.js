@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const score = weightedRandomScore();
     const rank = getRankByScore(score);
     fortunes[cat] = Math.floor(score); // レーダーチャート用に保存
+  　rankLabel.textContent = rank;
+　  rankLabel.className = "rank rank-" + rank;
 
     const bar = document.querySelector(`#${cat} .gauge-bar`);
     const label = document.querySelector(`#${cat} .label`);
@@ -79,5 +81,3 @@ function getRankByScore(score) {
   if (score >= 30) return "C";
   return "D";
 }
-rankLabel.textContent = rank;
-rankLabel.className = "rank rank-" + rank;
