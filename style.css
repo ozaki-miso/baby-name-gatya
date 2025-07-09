@@ -97,42 +97,47 @@ button:hover {
   display: inline-block;
   margin-left: 6px;
   user-select: none;
+  background: transparent; /* 背景は透明 */
 }
 
-/* 各ランクのカラー・装飾 */
+/* 虹色グラデーションを文字に適用（SSS） */
 .rank-SSS {
   background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
-  color: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   animation: rainbow 3s linear infinite;
 }
 
+/* 金色系は文字色だけ指定 */
 .rank-SS,
 .rank-S {
-  background: linear-gradient(to bottom, gold, orange);
-  color: #fff8e1;
+  color: gold;
+  text-shadow:
+    0 0 5px gold,
+    0 0 10px gold;
 }
 
 .rank-A {
-  background-color: hotpink;
-  color: white;
+  color: deeppink;
+  text-shadow: 0 0 5px deeppink;
 }
 
 .rank-B {
-  background-color: crimson;
-  color: white;
+  color: red;
+  text-shadow: 0 0 5px red;
 }
 
 .rank-C {
-  background-color: orange;
-  color: white;
+  color: orange;
+  text-shadow: 0 0 5px orange;
 }
 
 .rank-D {
-  background-color: gold;
-  color: black;
+  color: yellow;
+  text-shadow: 0 0 5px yellow;
 }
 
-/* 虹色アニメーション（SSS用） */
+/* 虹色アニメーション */
 @keyframes rainbow {
   0% { filter: hue-rotate(0deg); }
   100% { filter: hue-rotate(360deg); }
