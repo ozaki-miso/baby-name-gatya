@@ -5,19 +5,17 @@ fetch("name_data.json")
       return array[Math.floor(Math.random() * array.length)];
     }
 
-    
-function weightedRandomRank() {
-  const ranks = ["SSS", "SS", "S", "A", "B", "C", "D"];
-  const probabilities = [0.01, 0.02, 0.194, 0.194, 0.194, 0.194, 0.194];
-  const rand = Math.random();
-  let cumulative = 0;
-  for (let i = 0; i < ranks.length; i++) {
-    cumulative += probabilities[i];
-    if (rand < cumulative) return ranks[i];
-  }
-  return "D"; // fallback
-}
-
+    function weightedRandomRank() {
+      const ranks = ["SSS", "SS", "S", "A", "B", "C", "D"];
+      const probabilities = [0.01, 0.02, 0.194, 0.194, 0.194, 0.194, 0.194];
+      const rand = Math.random();
+      let cumulative = 0;
+      for (let i = 0; i < ranks.length; i++) {
+        cumulative += probabilities[i];
+        if (rand < cumulative) return ranks[i];
+      }
+      return "D"; // fallback
+    }
 
     document.getElementById("generate-button").addEventListener("click", () => {
       const lastName = document.getElementById("last-name").value.trim();
@@ -29,7 +27,16 @@ function weightedRandomRank() {
         return;
       }
 
-      const filteredList = names[type].filter(n => n.gender === gender || n.gender === "両方");
+      // namesは配列になっている前提でフィルター
+      const filteredList = names.filter(n =>
+        n.type === type && (n.gender === gender || n.gender === "両方")
+      );
+
+      if (filteredList.length === 0) {
+        alert("該当する名前が見つかりませんでした");
+        return;
+      }
+
       const chosen = getRandom(filteredList);
 
       const fortune = {
@@ -43,10 +50,13 @@ function weightedRandomRank() {
       localStorage.setItem("result", JSON.stringify({
         name: lastName + " " + chosen.name,
         yomi: chosen.yomi,
-        origin: chosen.origin, 
+        origin: chosen.origin,
         fortunes: fortune
       }));
 
       window.location.href = "/gacha.html";
     });
+  })
+  .catch(error => {
+    console.error("名前データの読み込みに失敗しました:", error);
   });
