@@ -43,6 +43,7 @@ function weightedRandomRank() {
       localStorage.setItem("result", JSON.stringify({
         name: lastName + " " + chosen.name,
         yomi: chosen.yomi,
+        origin: chosen.origin, 
         fortunes: fortune
       }));
 
