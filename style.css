@@ -237,15 +237,18 @@ button:hover {
   text-align: center;
   z-index: 1;
 
-  /* 背景画像設定 */
-  background-image: url('babyphoto.jpg'); /* ←ここを画像パスに変えてください */
+  background-image: url('babyphoto.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  /* 文字の読みやすさを上げるため影を追加 */
-  text-shadow:
-    2px 2px 6px rgba(0,0,0,0.7);
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+
+  /* ★ 追加：背景画像が大きく表示されるようにする */
+  height: 200px; /* お好みで調整可能（例：250px や 300px） */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* オーバーレイ用の疑似要素 */
