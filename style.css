@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+
 body {
   color: #333;
   margin: 0;
@@ -6,11 +9,9 @@ body {
   background: linear-gradient(120deg, #fff1f9, #e7f5ff);
   font-family: 'Kosugi Maru', sans-serif;
 }
-/* Google Fontsを先に読み込んでおいてください */
-@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
 
 .fancy-title {
-  font-family: 'Cherry Bomb One', cursive;
+  font-family: 'Sawarabi Mincho', serif;
   font-size: 3em;
   color: #ff69b4;
   text-shadow:
@@ -43,6 +44,7 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 .about-section {
   background: #fff5fb;
   padding: 20px;
@@ -116,8 +118,8 @@ button:hover {
 }
 
 .result-name {
-  font-family: 'Sawarabi Mincho', serif;  /* 筆文字っぽいフォント */
-  font-size: 3em;     /* 大きく */
+  font-family: 'Sawarabi Mincho', serif;
+  font-size: 3em;
   font-weight: bold;
   text-align: center;
   margin: 0;
@@ -129,7 +131,7 @@ button:hover {
   color: #666;
   text-align: center;
   margin: 0 0 0.3em 0;
-  font-family: 'Kosugi Maru', sans-serif;  /* フリガナは丸ゴシック風など軽めに */
+  font-family: 'Kosugi Maru', sans-serif;
 }
 
 .rank {
@@ -141,30 +143,24 @@ button:hover {
   display: inline-block;
   margin-left: 6px;
   user-select: none;
-  background: transparent; /* 背景は透明 */
-
-  /* ここから文字の輪郭 */
-  -webkit-text-stroke: 1px black; /* Safari/Chrome */
-  text-stroke: 1px black;         /* 標準仕様（対応ブラウザ少なめ） */
+  background: transparent;
+  -webkit-text-stroke: 1px black;
+  text-stroke: 1px black;
 }
 
-/* 虹色グラデーションを文字に適用（SSS） */
 .rank-SSS {
   background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px black; /* 輪郭も付ける */
+  -webkit-text-stroke: 1px black;
   animation: rainbow 3s linear infinite;
 }
 
-/* 金色系は文字色だけ指定 */
 .rank-SS,
 .rank-S {
   color: gold;
-  text-shadow:
-    0 0 5px gold,
-    0 0 10px gold;
-  -webkit-text-stroke: 1px black; /* 輪郭も追加 */
+  text-shadow: 0 0 5px gold, 0 0 10px gold;
+  -webkit-text-stroke: 1px black;
 }
 
 .rank-A {
@@ -191,10 +187,7 @@ button:hover {
   -webkit-text-stroke: 1px black;
 }
 
-/* 虹色アニメーション */
 @keyframes rainbow {
   0% { filter: hue-rotate(0deg); }
   100% { filter: hue-rotate(360deg); }
 }
-
-
