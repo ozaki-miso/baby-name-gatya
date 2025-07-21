@@ -147,3 +147,8 @@ function setFortuneMessage(category, rank) {
   if (!msgs) return "";
   return msgs[Math.floor(Math.random() * msgs.length)];
 }
+
+document.getElementById("retry-button").addEventListener("click", () => {
+  // 戻りたいガチャページのURLに変更してください
+  window.location.href = "/index.html"; 
+});
