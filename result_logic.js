@@ -85,3 +85,9 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+
+document.getElementById("love-message").textContent = "あなたの恋愛運は絶好調！";
+document.getElementById("study-message").textContent = "集中力が高まり勉強がはかどる一日！";
+document.getElementById("money-message").textContent = "臨時収入の予感あり！";
+document.getElementById("home-message").textContent = "家族と過ごす時間が心を癒します。";
+document.getElementById("total-message").textContent = "健康面では良好ですが、無理は禁物！";
