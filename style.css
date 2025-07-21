@@ -163,7 +163,8 @@ button:hover {
   font-size: 1.2em;
   color: #666;
   text-align: center;
-  margin: 0 0 0.3em 0;
+  margin-top: 0;
+  margin-bottom: 0;
   font-family: 'Kosugi Maru', sans-serif;
 }
 
