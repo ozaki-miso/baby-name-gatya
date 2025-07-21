@@ -44,7 +44,7 @@ fetch("name_data.json")
         study: weightedRandomRank(),
         money: weightedRandomRank(),
         home: weightedRandomRank(),
-        total: weightedRandomRank()
+        health: weightedRandomRank()
       };
 
       localStorage.setItem("result", JSON.stringify({
