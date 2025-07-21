@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const fortunes = data.fortunes || {}; // 保存された値を使う
 
 
+  console.log('Raw data:', data);
+console.log('health:', data.health)
 
 
   categories.forEach(cat => {
