@@ -1,3 +1,7 @@
+const fortune = JSON.parse(localStorage.getItem("fortune"));
+console.log("fortune object:", fortune); 
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const data = JSON.parse(localStorage.getItem("result"));
   if (!data) return;
