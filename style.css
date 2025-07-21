@@ -148,10 +148,14 @@ button:hover {
 .result-name {
   font-family: 'Sawarabi Mincho', serif;
   font-size: 3em;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
-  margin: 0;
-  padding: 0;
+  color: #4a2f19;
+  letter-spacing: 0.05em;
+  text-shadow:
+    2px 2px 1px rgba(0,0,0,0.2),
+    1px 1px 0 rgba(255,255,255,0.7);
+  font-style: italic;
 }
 
 .result-yomi {
