@@ -150,5 +150,5 @@ function setFortuneMessage(category, rank) {
 
 document.getElementById("retry-button").addEventListener("click", () => {
   // 戻りたいガチャページのURLに変更してください
-  window.location.href = "/index.html"; 
+  window.location.href = "/gacha.html"; 
 });
