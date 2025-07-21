@@ -227,4 +227,35 @@ button:hover {
   font-weight: bold;
   cursor: pointer;
 }
+.fancy-title {
+  position: relative;
+  font-family: 'Cherry Bomb One', cursive;
+  font-size: 3em;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 15px;
+  text-align: center;
+  z-index: 1;
+
+  /* 背景画像設定 */
+  background-image: url('path/to/your-image.jpg'); /* ←ここを画像パスに変えてください */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* 文字の読みやすさを上げるため影を追加 */
+  text-shadow:
+    2px 2px 6px rgba(0,0,0,0.7);
+}
+
+/* オーバーレイ用の疑似要素 */
+.fancy-title::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.3); /* 透明な黒のオーバーレイ */
+  border-radius: 15px;
+  z-index: -1; /* 背景より後ろに配置 */
+}
+
 
