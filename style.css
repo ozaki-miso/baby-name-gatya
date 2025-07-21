@@ -140,7 +140,7 @@ button:hover {
   background-image: linear-gradient(to bottom, #99e6cc, #66cc99, #339966);
 }
 
-.gauge-bar.total {
+.gauge-bar.health {
   background-color: #9966cc;
   background-image: linear-gradient(to bottom, #cc99ff, #9966cc, #663399);
 }
