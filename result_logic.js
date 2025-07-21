@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
           getScoreByRank(fortunes.study),
           getScoreByRank(fortunes.money),
           getScoreByRank(fortunes.home),
-          getScoreByRank(fortunes.total)
+          getScoreByRank(fortunes.health)
         ],
         backgroundColor: 'rgba(255, 105, 180, 0.2)',
         borderColor: 'rgba(255, 105, 180, 1)',
