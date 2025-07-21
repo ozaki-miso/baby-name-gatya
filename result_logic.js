@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("origin").textContent = data.origin || "（名前の由来がここに入ります）";
 
   const categories = ["love", "study", "money", "home", "total"];
-  const fortunes = data.fortunes || {}; // ← 保存された値を使う
+  const fortunes = data.fortunes || {}; // 保存された値を使う
 
   categories.forEach(cat => {
     const rank = fortunes[cat];
-    const score = getScoreByRank(rank); // ← スコアはランクに応じて決め打ち
+    const score = getScoreByRank(rank);
     const bar = document.querySelector(`#${cat} .gauge-bar`);
     const label = document.querySelector(`#${cat} .label`);
     const rankLabel = document.querySelector(`#${cat} .rank`);
@@ -20,6 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
     label.textContent = score;
     rankLabel.textContent = rank;
     rankLabel.className = "rank rank-" + rank;
+
+    // メッセージ表示
+    const msgElem = document.getElementById(`${cat}-message`);
+    if (msgElem) {
+      msgElem.textContent = setFortuneMessage(cat, rank);
+    }
   });
 
   // レーダーチャート描画
@@ -58,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
+// ランクに応じてスコアをざっくり決める（見た目用）
 function getScoreByRank(rank) {
   switch (rank) {
     case "SSS":
@@ -85,7 +91,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-//メッセージ用
+// ランクごとのメッセージ一覧
 const messages = {
   love: {
     SSS: ["愛情に溢れた毎日が続くでしょう。", "恋愛運は最高峰！素敵な出会いが期待できる。"],
@@ -134,6 +140,7 @@ const messages = {
   }
 };
 
+// ランクごとにメッセージをランダム取得
 function setFortuneMessage(category, rank) {
   const msgs = messages[category]?.[rank];
   if (!msgs) return "";
