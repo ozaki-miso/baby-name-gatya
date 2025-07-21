@@ -238,7 +238,7 @@ button:hover {
   z-index: 1;
 
   /* 背景画像設定 */
-  background-image: url('path/to/your-image.jpg'); /* ←ここを画像パスに変えてください */
+  background-image: url('babyphoto.jpg'); /* ←ここを画像パスに変えてください */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
