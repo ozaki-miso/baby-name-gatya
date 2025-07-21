@@ -261,4 +261,9 @@ button:hover {
   z-index: -1; /* 背景より後ろに配置 */
 }
 
-
+@media (max-width: 600px) {
+  .fancy-title {
+    font-size: 2em;
+    height: 150px;
+  }
+}
