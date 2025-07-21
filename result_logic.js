@@ -10,10 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const fortunes = data.fortunes || {}; // 保存された値を使う
 
 
-  console.log('Raw data:', data);
-console.log('health:', data.health)
-
-
   categories.forEach(cat => {
     const rank = fortunes[cat];
     const score = getScoreByRank(rank);
@@ -87,7 +83,7 @@ function getScoreByRank(rank) {
     case "D":
       return getRandomInt(30, 54);
     default:
-      return 0;
+      return 84;
   }
 }
 
