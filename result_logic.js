@@ -10,6 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const categories = ["love", "study", "money", "home", "health"];
   const fortunes = data.fortunes || {}; // 保存された値を使う
 
+
+  const fortune = Object.fromEntries(
+  ["love", "study", "money", "home", "health"].map(key => [key, weightedRandomRank()])
+);
+
   categories.forEach(cat => {
     const rank = fortunes[cat];
     const score = getScoreByRank(rank);
