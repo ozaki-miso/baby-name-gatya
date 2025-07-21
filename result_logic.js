@@ -7,14 +7,17 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("yomi").textContent = "（" + data.yomi + "）";
   document.getElementById("origin").textContent = data.origin || "（名前の由来がここに入ります）";
 
-    const fortune = Object.fromEntries(
+  
+  const fortune = Object.fromEntries(
   ["love", "study", "money", "home", "health"].map(key => [key, weightedRandomRank()])
+);
+ 
+  
   const categories = ["love", "study", "money", "home", "health"];
   const fortunes = data.fortunes || {}; // 保存された値を使う
 
 
 
-);
 
   categories.forEach(cat => {
     const rank = fortunes[cat];
