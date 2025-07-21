@@ -58,17 +58,30 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// ランクに応じてスコアをざっくり決める（見た目用）
+
 function getScoreByRank(rank) {
   switch (rank) {
-    case "SSS": return 100;
-    case "SS": return 99;
-    case "S": return 90;
-    case "A": return 75;
-    case "B": return 60;
-    case "C": return 45;
-    case "D": return 25;
-    default: return 0;
+    case "SSS":
+      return 100;
+    case "SS":
+      return getRandomInt(96, 99);
+    case "S":
+      return getRandomInt(91, 95);
+    case "A":
+      return getRandomInt(80, 90);
+    case "B":
+      return getRandomInt(70, 79);
+    case "C":
+      return getRandomInt(55, 69);
+    case "D":
+      return getRandomInt(30, 54);
+    default:
+      return 0;
   }
+}
+
+// 最小値と最大値の範囲で整数を返す関数
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
