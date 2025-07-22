@@ -309,3 +309,26 @@ button:active {
     height: 150px;
   }
 }
+.x-share-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #000; /* 黒背景 */
+  color: #fff; /* 白文字 */
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: sans-serif;
+  transition: background-color 0.3s;
+}
+
+.x-share-button:hover {
+  background-color: #111;
+}
+
+.x-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  filter: brightness(0) invert(1); /* 白っぽく表示 */
+}
