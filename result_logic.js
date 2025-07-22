@@ -152,3 +152,15 @@ document.getElementById("retry-button").addEventListener("click", () => {
   // 戻りたいガチャページのURLに変更してください
   window.location.href = "/index.html"; 
 });
+
+//Xシャア
+function updateXShareButton(name, yomi) {
+  const shareText = `赤ちゃん名付けガチャで「${name}（${yomi}）」が出ました！あなたも試してみてね✨`;
+  const shareUrl = "https://akachangacha.com/"; // サイトURLに置き換えてください
+  const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}&hashtags=赤ちゃん名付けガチャ`;
+
+  const link = document.getElementById("x-share-button");
+  if (link) {
+    link.href = tweetUrl;
+  }
+}
