@@ -1,3 +1,21 @@
+//保持された入力データーを元に戻すやつ
+window.addEventListener("DOMContentLoaded", () => {
+  const lastName = sessionStorage.getItem("lastName");
+  const gender = sessionStorage.getItem("gender");
+  const type = sessionStorage.getItem("type");
+
+  if (lastName) document.getElementById("last-name").value = lastName;
+  if (gender) {
+    const genderRadio = document.querySelector(`input[name="gender"][value="${gender}"]`);
+    if (genderRadio) genderRadio.checked = true;
+  }
+  if (type) {
+    const typeRadio = document.querySelector(`input[name="type"][value="${type}"]`);
+    if (typeRadio) typeRadio.checked = true;
+  }
+});
+
+
 fetch("name_data.json")
   .then(response => response.json())
   .then(names => {
