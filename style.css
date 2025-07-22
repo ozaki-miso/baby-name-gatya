@@ -309,12 +309,3 @@ button:active {
     height: 150px;
   }
 }
-.share-buttons {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.share-buttons a {
-  display: inline-block;
-  margin: 0 10px;
-}
