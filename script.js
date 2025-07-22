@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 
-fetch("name_data.json")
+fetch("namedata2.json")
   .then(response => response.json())
   .then(names => {
     function getRandom(array) {
