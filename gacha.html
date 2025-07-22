@@ -2,69 +2,53 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <title>名前生成中...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>名前を生成中...</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #ffe4ec, #d0f0ff);
-      overflow: hidden;
+      background-color: #fff0f5;
       font-family: 'Kosugi Maru', sans-serif;
     }
 
     h1 {
-      color: #ff66cc;
       text-align: center;
-      margin-top: 40vh;
+      margin-top: 10vh;
       font-size: 2.5em;
-      animation: blink 1s infinite alternate;
+      color: #ff66cc;
     }
 
-    .sparkle {
-      position: absolute;
-      width: 20px;
+    .progress-container {
+      width: 80%;
       height: 20px;
-      background: radial-gradient(#fff, transparent);
-      border-radius: 50%;
-      opacity: 0.6;
-      animation: float 3s linear infinite;
+      background-color: #ffffff;
+      border-radius: 10px;
+      margin: 30vh auto 0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) inset;
     }
 
-    @keyframes blink {
-      from { opacity: 0.6; }
-      to { opacity: 1; }
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #ff66cc, #66ccff);
+      border-radius: 10px;
+      animation: loading 3.5s forwards;
     }
 
-    @keyframes float {
-      0% {
-        transform: translateY(100vh) scale(0.8);
-        opacity: 0;
-      }
-      50% {
-        opacity: 0.8;
-      }
-      100% {
-        transform: translateY(-10vh) scale(1.2);
-        opacity: 0;
-      }
+    @keyframes loading {
+      0% { width: 0%; }
+      100% { width: 100%; }
     }
   </style>
 </head>
 <body>
-  <h1>名前生成中...</h1>
+  <h1>名前を生成中...</h1>
+  <div class="progress-container">
+    <div class="progress-bar"></div>
+  </div>
 
-  <!-- キラキラをたくさん生成 -->
   <script>
-    for (let i = 0; i < 20; i++) {
-      const sparkle = document.createElement("div");
-      sparkle.classList.add("sparkle");
-      sparkle.style.left = Math.random() * 100 + "vw";
-      sparkle.style.animationDuration = (2 + Math.random() * 2) + "s";
-      sparkle.style.animationDelay = Math.random() + "s";
-      document.body.appendChild(sparkle);
-    }
-
-    // 数秒後に結果ページへ移動
     setTimeout(() => {
       window.location.href = "/result.html";
     }, 3500);
