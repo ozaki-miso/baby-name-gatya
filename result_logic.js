@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("origin").textContent = data.origin || "（名前の由来がここに入ります）";
 
   //X 
-  updateXShareButton(data.name, data.yomi); 
+  updateShareLinks(name, yomi);
   
   const categories = ["love", "study", "money", "home", "health"];
   const fortunes = data.fortunes || {}; // 保存された値を使う
