@@ -305,7 +305,7 @@ button:active {
 
 @media (max-width: 600px) {
   .fancy-title {
-    font-size: 2.5em;
+    font-size: 2.3em;
     height: 150px;
   }
 }
