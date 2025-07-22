@@ -279,7 +279,7 @@ button:hover {
   text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 
   /* ★ 追加：背景画像が大きく表示されるようにする */
-  height: 300px; /* お好みで調整可能（例：250px や 300px） */
+  height: 250px; /* お好みで調整可能（例：250px や 300px） */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -297,7 +297,7 @@ button:hover {
 
 @media (max-width: 600px) {
   .fancy-title {
-    font-size: 2em;
+    font-size: 3em;
     height: 150px;
   }
 }
