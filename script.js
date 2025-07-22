@@ -5,9 +5,6 @@ fetch("name_data.json")
       return array[Math.floor(Math.random() * array.length)];
     }
 
-    localStorage.setItem("lastName", lastName);
-localStorage.setItem("gender", gender);
-localStorage.setItem("type", type);
 
     function weightedRandomRank() {
       const ranks = ["SSS", "SS", "S", "A", "B", "C", "D"];
