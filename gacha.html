@@ -78,28 +78,11 @@
   <img src="angel.png" class="angel" style="top: 50%; left: 50%; animation-delay: 2.5s;">
 
 <script src="generate.js"></script>
-<script>
-  const lastName = localStorage.getItem("lastName");
-  const gender = localStorage.getItem("gender");
-  const type = localStorage.getItem("type");
-
-  if (!lastName || !gender || !type) {
-    window.location.href = "/index.html";
-  } else {
-    fetch("name_data.json")
-      .then(res => res.json())
-      .then(names => {
-        generateNameAndFortune(names, lastName, type, gender);
-      })
-      .catch(err => {
-        console.error("データ読み込み失敗:", err);
-      });
-  }
-
-  setTimeout(() => {
-    window.location.href = "/result.html";
-  }, 3500);
-</script>
+  <script>
+    setTimeout(() => {
+      window.location.href = "/result.html";
+    }, 3500);
+  </script>
 </body>
 </html>
 
