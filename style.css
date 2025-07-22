@@ -83,17 +83,25 @@ input[type="text"] {
 
 button {
   padding: 12px 20px;
-  background: #ff69b4;
+  background: linear-gradient(to bottom, #ff69b4, #ff1493); /* グラデーション */
   color: white;
   font-size: 16px;
+  font-weight: bold;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 0 #c71585, 0 6px 12px rgba(0, 0, 0, 0.15); /* 立体影 */
 }
 
 button:hover {
-  background: #ff1493;
+  transform: translateY(-2px); /* 少し浮く */
+  box-shadow: 0 6px 0 #c71585, 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(1px); /* 押し込まれる感じ */
+  box-shadow: 0 2px 0 #c71585, 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .fortune-block {
