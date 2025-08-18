@@ -10,6 +10,66 @@ body {
   font-family: 'Kosugi Maru', sans-serif;
 }
 
+.ranking-section {
+  background: #fff;
+  padding: 40px 20px;
+  margin-top: 40px;
+  border-top: 3px solid #ff4081;
+}
+
+.ranking-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.ranking-table {
+  flex: 1 1 400px;
+  max-width: 500px;
+}
+
+.ranking-table h3 {
+  text-align: center;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.ranking-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fafafa;
+}
+
+.ranking-table th, .ranking-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.ranking-table th {
+  background: #f0f0f0;
+}
+
+.ranking-table tbody tr:nth-child(1) td {
+  background: #fff9c4;
+  font-weight: bold;
+}
+
+.ranking-table tbody tr:nth-child(2) td {
+  background: #e0e0e0;
+}
+
+.ranking-table tbody tr:nth-child(3) td {
+  background: #ffe0b2;
+}
+
+.source {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
 
 
 .fancy-title {
